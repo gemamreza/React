@@ -1,26 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import Navbar from './components/header';
+import Login from './components/loginpage/login';
+import Register from './components/loginpage/register';
+import Homepage from './components/hompage';
+import Product from './components/product';
+import Latihan from './components/latihan';
+import Latihann from './components/latihan2';
+import Delvocal from './components/deleteVocal';
+import Tambah from './components/nambah';
+import {Route} from 'react-router-dom';
 
 class App extends Component {
+  btnClick = () =>{
+    alert('Masuk')
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <div>
+      <Navbar/>
+      <div className="container">
+        <Route path='/login/' component={Login}/>
+        <Route path='/' component={Homepage} exact />
+        <Route path='/product' component={Product} />
+        <Route path='/latihan' component={Latihan} />
+        <Route path='/latihann' component={Latihann} />
+        <Route path='/deletevocal' component={Delvocal} />
+        <Route path='/tambah' component={Tambah} />
+        <Route path='/register' component={Register} />
+      {/* <Footer nama='Gema' color='red' fn={this.btnClick} />
+      <Footer nama='Gema'>Developer</Footer>
+      <Footer nama='Gema'/> */}
+      
       </div>
+      <Footer/>
+      </div>
+    
     );
   }
 }

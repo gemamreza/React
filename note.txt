@@ -1,0 +1,62 @@
+    <header className="App-header"></header>
+<img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+        <h1>Hello World</h1>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+// MODULAR ADALAH MEMBUAT KOMPONEN KECIL2 LALU DISATUKAN
+// REACTSTRAP.git
+// npmjs.com
+memanggil fucntion di dalam render tidak perlu menggunakan this.
+memanggil array namaarray[index].variable
+State hanyalah objek untuk mengolah data, setState dipanggil akan terjadi re-render
+di dalam render tida perlu menggunakan this
+state selalu dideclare di bawah class
+res berbentuk object array of object
+...INITIAL_STATE untuk mengubah global state
+
+component -------> Actions -----> Global State
+Global State -------> mapStateToprops -------->Component
+
+membuat global state di folder reducer bisa dengan membuat file baru atau dengan membuat property baru.
+import file baru ke index.js.
+menampilkan ke komponen dengan  mapStateToprops
+komponen ke global state dengan Actions
+--How to create  Actions
+maasuk ke folder action, membuat file baru, dalam sini ada type dan payload
+
+
+--DEPLOY REACT FIREBASE--
+1. buat projek baru di FB
+2. npm run build
+3. folder build dikeluarkan
+4. membuat folder untuk deploy
+5. isi folder build dicut di masukan ke dalam folder public pada folder firebase
+
+jika ingin mengupdate harus npm run build lagi

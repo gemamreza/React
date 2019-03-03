@@ -1,0 +1,57 @@
+import React from 'react'
+
+class Tugas extends React.Component{
+    state = {todo : []}
+    addToDo = () => {
+        var kegiatan = this.refs.input.value
+        var aktivitas = []
+        //var act = kegiatan.split(' ')
+        aktivitas.push(kegiatan)
+        console.log(aktivitas)
+        this.setState({todo : this.state.todo.concat(aktivitas)})
+    }
+    renderToDo = () =>{
+        var jsx = this.state.todo.map((val) => {
+            return(
+                <div>
+                    <center>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>{val.todo}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    
+                    </center>
+                </div>
+            )
+        })
+        return jsx
+    }
+    render(){
+        return(
+            <div className="row justify-content-center">
+                <div className="col-md-6">
+                    <div className="form-group">
+                        <div className="row justify-content-center">
+                            <div className="col-md-4">
+                            <input class="form-control" type="text" placeholder="What will you do?" ref="input"/>
+                            </div>
+                            <div className="col-md-4">
+                            <input type="button" value="ADD" onClick={this.addToDo} />
+                            </div>          
+                            <div className="col-md-4">
+                               {this.renderToDo()}
+                               <input type="button" value="DELETE ALL" onClick={this.deleteAll} />
+                            </div>              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Tugas
