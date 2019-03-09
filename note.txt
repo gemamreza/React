@@ -56,7 +56,7 @@ maasuk ke folder action, membuat file baru, dalam sini ada type dan payload
 1. buat projek baru di FB
 2. npm run build
 3. folder build dikeluarkan
-4. membuat folder untuk deploy
+4. membuat folder untuk deploy, firebase init
 5. isi folder build dicut di masukan ke dalam folder public pada folder firebase
 
 jika ingin mengupdate harus npm run build lagi

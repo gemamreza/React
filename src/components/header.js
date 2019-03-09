@@ -50,6 +50,9 @@ class Example extends React.Component {
                 <NavLink style={{color:'black'}}>{this.props.kata} Words</NavLink>
               </NavItem>
               <NavItem>
+                <Link to='/movie' style={{textDecoration:'none'}}><NavLink>Search Movie</NavLink></Link>
+              </NavItem>
+              <NavItem>
                 <Link to='./latihan' style={{textDecoration:'none'}}><NavLink>Latihan</NavLink></Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
